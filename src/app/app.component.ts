@@ -28,4 +28,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'login-sso';
+
+  loading = false;
+  stage = 'credentials';
+
+  onError(error) {
+    console.error(error);
+  }
+
+  onSuccess(success) {
+    console.log('success', success);
+  }
+
 }
