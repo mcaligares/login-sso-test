@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PtyAuthModule } from '@pty/auth';
+import { PtyAuthModule, PtyAuthService } from '@pty/auth';
 
 @NgModule({
   declarations: [
@@ -10,9 +10,9 @@ import { PtyAuthModule } from '@pty/auth';
   ],
   imports: [
     BrowserModule,
-    // PtyAuthModule.forRoot({ keycloak: { serverConfiguration: '/assets/keycloak/settings.dev.json' } })
+    PtyAuthModule.forRoot({ keycloak: { serverConfiguration: '/assets/keycloak/settings.dev.json' } })
   ],
-  providers: [],
+  providers: [PtyAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
