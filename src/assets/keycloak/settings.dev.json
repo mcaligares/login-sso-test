@@ -1,0 +1,8 @@
+{
+  "realm": "betonline.ag",
+  "auth-server-url": "http://keycloak-ppd.auth.itspty.com/auth",
+  "ssl-required": "none",
+  "resource": "betonline.ag",
+  "public-client": true,
+  "confidential-port": 0
+}
